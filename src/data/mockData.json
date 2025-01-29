@@ -1,0 +1,86 @@
+[
+  {
+    "id": "1",
+    "name": "John Doe",
+    "lastMessage": "Hey! How are you?",
+    "timestamp": "2025-01-28T12:34:56Z",
+    "statusDescription": "Hey! I'm using GenerationApp."
+  },
+  {
+    "id": "2",
+    "name": "Jane Smith",
+    "lastMessage": "Meeting at 3 PM?",
+    "timestamp": "2025-01-27T09:00:00Z",
+    "statusDescription": "Hey! I'm using GenerationApp."
+  },
+  {
+    "id": "3",
+    "name": "Mike Johnson",
+    "lastMessage": "Let's catch up soon.",
+    "timestamp": "2025-01-25T14:45:00Z",
+    "statusDescription": "Hey! I'm using GenerationApp."
+  },
+  {
+    "id": "4",
+    "name": "Emily Brown",
+    "lastMessage": "Can you send the files?",
+    "timestamp": "2025-01-24T10:15:30Z",
+    "statusDescription": "Hey! I'm using GenerationApp."
+  },
+  {
+    "id": "5",
+    "name": "David Wilson",
+    "lastMessage": "Good morning!",
+    "timestamp": "2025-01-23T08:00:00Z",
+    "statusDescription": "Hey! I'm using GenerationApp."
+  },
+  {
+    "id": "6",
+    "name": "Sophia Martinez",
+    "lastMessage": "See you later!",
+    "timestamp": "2025-01-22T16:20:45Z",
+    "statusDescription": "Hey! I'm using GenerationApp."
+  },
+  {
+    "id": "7",
+    "name": "James Anderson",
+    "lastMessage": "Let's go for lunch.",
+    "timestamp": "2025-01-21T12:45:10Z",
+    "statusDescription": "Hey! I'm using GenerationApp."
+  },
+  {
+    "id": "8",
+    "name": "Olivia Taylor",
+    "lastMessage": "Don't forget our call.",
+    "timestamp": "2025-01-20T14:30:00Z",
+    "statusDescription": "Hey! I'm using GenerationApp."
+  },
+  {
+    "id": "9",
+    "name": "William Thomas",
+    "lastMessage": "I'll be there in 5 minutes.",
+    "timestamp": "2025-01-19T17:50:20Z",
+    "statusDescription": "Hey! I'm using GenerationApp."
+  },
+  {
+    "id": "10",
+    "name": "Charlotte White",
+    "lastMessage": "Happy Birthday! 🎉",
+    "timestamp": "2025-01-18T09:15:00Z",
+    "statusDescription": "Hey! I'm using GenerationApp."
+  },
+  {
+    "id": "11",
+    "name": "Daniel Harris",
+    "lastMessage": "Can we reschedule?",
+    "timestamp": "2025-01-17T11:05:30Z",
+    "statusDescription": "Hey! I'm using GenerationApp."
+  },
+  {
+    "id": "12",
+    "name": "Emma Robinson",
+    "lastMessage": "Thanks for your help!",
+    "timestamp": "2025-01-16T13:40:55Z",
+    "statusDescription": "Hey! I'm using GenerationApp."
+  }
+]
