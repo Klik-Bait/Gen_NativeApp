@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, View } from "react-native";
+import { AuthProvider } from "./src/context/AuthContext"; // Import AuthProvider
 import { ThemeProvider, useTheme } from "./src/context/ThemeContext";
 import Navigation from "./src/navigation/Navigation";
 import { LightTheme } from "./src/styles/themes/themes"; // Import LightTheme for comparison
@@ -11,7 +12,6 @@ const ThemedApp = () => {
   return (
     <View style={[styles.container, { backgroundColor: theme.background }]}>
       <Navigation />
-      {/* Compare with LightTheme to determine the status bar style */}
       <StatusBar style={theme === LightTheme ? "dark" : "light"} />
     </View>
   );
@@ -19,9 +19,11 @@ const ThemedApp = () => {
 
 export default function App() {
   return (
-    <ThemeProvider>
-      <ThemedApp />
-    </ThemeProvider>
+    <AuthProvider>
+      <ThemeProvider>
+        <ThemedApp />
+      </ThemeProvider>
+    </AuthProvider>
   );
 }
 

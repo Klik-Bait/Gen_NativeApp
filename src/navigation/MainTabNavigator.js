@@ -2,7 +2,7 @@ import { Entypo, Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useTheme } from "../context/ThemeContext";
 import ChatList from "../screens/ChatList/ChatList";
-import Register from "../screens/Register/Register";
+import Contacts from "../screens/Contacts/Contacts";
 import { default as SettingsScreen } from "../screens/Settings/Settings";
 
 const Tab = createBottomTabNavigator();
@@ -20,8 +20,8 @@ const MainTabNavigator = () => {
       }}
     >
       <Tab.Screen
-        name="Register"
-        component={Register}
+        name="ChatList"
+        component={ChatList}
         options={({ navigation }) => ({
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home" size={size} color={color} />
@@ -38,20 +38,11 @@ const MainTabNavigator = () => {
         })}
       />
       <Tab.Screen
-        name="ChatList"
-        component={ChatList}
-        options={({ navigation }) => ({
+        name="Contacts"
+        component={Contacts}
+        options={({}) => ({
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="logo-whatsapp" size={size} color={color} />
-          ),
-          headerRight: () => (
-            <Entypo
-              onPress={() => navigation.navigate("Contacts")}
-              name="new-message"
-              size={18}
-              color={"royalblue"}
-              style={{ marginRight: 15 }}
-            />
           ),
         })}
       />

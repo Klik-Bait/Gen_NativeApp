@@ -1,4 +1,5 @@
-import React from "react";
+import { Ionicons } from "@expo/vector-icons";
+import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -6,35 +7,70 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { useAuth } from "../../context/AuthContext";
+import { useTheme } from "../../context/ThemeContext";
 
-const Login = () => {
+const Login = ({ navigation }) => {
+  const { login } = useAuth();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const { theme } = useTheme();
+
+  const handleLogin = async () => {
+    setError("");
+    const result = await login(email, password);
+    if (!result.success) {
+      setError(result.message);
+    }
+  };
+
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor: theme.background }]}>
       {/* App Logo */}
-      <Text style={styles.logo}>
-        <Text style={styles.logoIcon}>💬 </Text>Chatify
+      <Text style={[styles.logo, { color: theme.text }]}>
+        <Ionicons
+          name="people-outline"
+          style={[styles.icon, { color: theme.text }]}
+        />
+        Generation App
       </Text>
 
       {/* Input Fields */}
       <TextInput
-        style={styles.input}
-        placeholder="Username"
-        placeholderTextColor="#888"
+        style={[
+          styles.input,
+          { backgroundColor: theme.inputBackground, color: theme.text },
+        ]}
+        placeholder="Email"
+        placeholderTextColor="#cfcfcf"
+        value={email}
+        onChangeText={setEmail}
+        keyboardType="email-address"
+        autoCapitalize="none"
       />
       <TextInput
-        style={styles.input}
+        style={[
+          styles.input,
+          { backgroundColor: theme.inputBackground, color: theme.text },
+        ]}
         placeholder="Password"
-        placeholderTextColor="#888"
+        placeholderTextColor="#cfcfcf"
         secureTextEntry
+        value={password}
+        onChangeText={setPassword}
       />
 
+      {/* Error Message */}
+      {error ? <Text style={styles.errorText}>{error}</Text> : null}
+
       {/* Login Button */}
-      <TouchableOpacity style={styles.loginButton}>
+      <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
         <Text style={styles.loginButtonText}>Login</Text>
       </TouchableOpacity>
 
       {/* Register Link */}
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("RegisterForm")}>
         <Text style={styles.registerText}>Register for a new account</Text>
       </TouchableOpacity>
     </View>
@@ -69,6 +105,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#f9f9f9",
     fontSize: 16,
   },
+  errorText: {
+    color: "red",
+    fontSize: 14,
+    marginBottom: 10,
+  },
   loginButton: {
     width: "100%",
     backgroundColor: "#007BFF",
@@ -86,6 +127,10 @@ const styles = StyleSheet.create({
     color: "#007BFF",
     fontSize: 14,
     textDecorationLine: "underline",
+  },
+  icon: {
+    fontSize: 32,
+    color: "darkgray",
   },
 });
 

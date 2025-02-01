@@ -20,6 +20,17 @@ Check installed globaly packages:
 
 - npm list -g --depth=0
 
+# How to Test
+
+1️⃣ Start JSON Server
+
+Remember to start json server where db.json file exist:
+json-server --watch db.json --port 5000
+
+2️⃣ Run Your App
+
+npm start
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).

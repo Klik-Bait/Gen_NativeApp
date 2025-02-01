@@ -9,9 +9,12 @@ import {
   View,
 } from "react-native";
 import assets from "../../../assets/index";
+import { useAuth } from "../../context/AuthContext";
 import { useTheme } from "../../context/ThemeContext";
+
 const Settings = () => {
   const { theme, toggleTheme } = useTheme();
+  const { logout } = useAuth();
   const [isAppSettingsExpanded, setAppSettingsExpanded] = useState(false);
 
   let backgroundColor;
@@ -110,7 +113,7 @@ const Settings = () => {
       </View>
       <View>
         {/* Logout Button */}
-        <TouchableOpacity style={styles.logoutButton}>
+        <TouchableOpacity style={styles.logoutButton} onPress={logout}>
           <Text style={styles.logoutButtonText}>Log out</Text>
         </TouchableOpacity>
       </View>
@@ -170,7 +173,7 @@ const styles = StyleSheet.create({
     padding: 15,
     backgroundColor: "#f1f1f1",
     borderRadius: 10,
-    arginBottom: 10,
+    marginBottom: 10,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",

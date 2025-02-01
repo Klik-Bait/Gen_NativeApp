@@ -29,30 +29,45 @@ const RegisterForm = ({ navigation }) => {
         style={[styles.inputContainer, { backgroundColor: theme.background }]}
       >
         <TextInput
-          style={[styles.input, { color: theme.text }]}
+          style={[
+            styles.input,
+            { backgroundColor: theme.inputBackground, color: theme.text },
+          ]}
           placeholder="Email"
-          placeholderTextColor="#888"
+          placeholderTextColor="#cfcfcf"
         />
         <TextInput
-          style={[styles.input, { color: theme.text }]}
+          style={[
+            styles.input,
+            { backgroundColor: theme.inputBackground, color: theme.text },
+          ]}
           placeholder="Password"
-          placeholderTextColor="#888"
+          placeholderTextColor="#cfcfcf"
           secureTextEntry
         />
         <TextInput
-          style={[styles.input, { color: theme.text }]}
+          style={[
+            styles.input,
+            { backgroundColor: theme.inputBackground, color: theme.text },
+          ]}
           placeholder="Name"
-          placeholderTextColor="#888"
+          placeholderTextColor="#cfcfcf"
         />
         <TextInput
-          style={[styles.input, { color: theme.text }]}
+          style={[
+            styles.input,
+            { backgroundColor: theme.inputBackground, color: theme.text },
+          ]}
           placeholder="Username"
-          placeholderTextColor="#888"
+          placeholderTextColor="#cfcfcf"
         />
         <TextInput
-          style={[styles.input, { color: theme.text }]}
+          style={[
+            styles.input,
+            { backgroundColor: theme.inputBackground, color: theme.text },
+          ]}
           placeholder="Phone Number"
-          placeholderTextColor="#888"
+          placeholderTextColor="#cfcfcf"
           keyboardType="phone-pad"
         />
       </View>
