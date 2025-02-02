@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "123456",
+      "token": "mocked-token-123"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "password": "abcdef",
+      "token": "mocked-token-456"
+    },
+    {
+      "id": "3",
+      "name": "Alice Johnson",
+      "email": "alice@example.com",
+      "password": "alicepass",
+      "token": "mocked-token-789"
+    },
+    {
+      "id": "4",
+      "name": "Bob Brown",
+      "email": "bob@example.com",
+      "password": "bobsecure",
+      "token": "mocked-token-101"
+    }
+  ]
+}
